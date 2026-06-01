@@ -98,7 +98,7 @@
         "processor_type": "minecraft:rule"
       },
       {
-        "processor_type": "stonevaults:nowater_processor"
+        "processor_type": "stonevault:nowater_processor"
       }
     ]
   }

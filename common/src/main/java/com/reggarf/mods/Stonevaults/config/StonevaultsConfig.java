@@ -3,37 +3,63 @@ package com.reggarf.mods.Stonevaults.config;
 import com.reggarf.mods.Stonevaults.Constants;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
+import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
 import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 
-
 @Config(name = Constants.MOD_ID)
-public class StonevaultsConfig implements ConfigData {
+@Config.Gui.Background("minecraft:textures/block/deepslate_tiles.png")
+public class StonevaultsConfig extends PartitioningSerializer.GlobalData {
 
-    public static final class Structure {
-        public int SPACING = 64;
-        public int SEPARATION = 32;
-        public int SALT = 987654321;
+    @ConfigEntry.Category("magetower")
+    @ConfigEntry.Gui.TransitiveObject()
+    public MageTower MAGETOWER = new MageTower();
 
-        public int SIZE;
+    @ConfigEntry.Category("igloo")
+    @ConfigEntry.Gui.TransitiveObject()
+    public Igloo IGLOO = new Igloo();
 
-        public Structure(int size) {
-            this.SIZE = size;
-        }
+    @ConfigEntry.Category("dungeon")
+    @ConfigEntry.Gui.TransitiveObject()
+    public Dungeon DUNGEON = new Dungeon();
+
+    @ConfigEntry.Category("pillager")
+    @ConfigEntry.Gui.TransitiveObject()
+    public Pillager PILLAGER = new Pillager();
+
+    @Config(name = "magetower")
+    public static class MageTower implements ConfigData {
+
+        @ConfigEntry.Gui.Tooltip
+        @ConfigEntry.BoundedDiscrete(min = 1, max = 30)
+        @Comment("Controls how many jigsaw expansions are attempted.")
+        public int SIZE = 7;
     }
 
-    @Comment("""
-            Structure Configs.
+    @Config(name = "igloo")
+    public static class Igloo implements ConfigData {
 
-            SIZE controls how many jigsaw expansions are attempted.
-            Larger values generally create larger structures.
-            For example, increasing Mage Tower size can create more floors.
-            """)
-    public Structure MAGETOWER = new Structure(7);
+        @ConfigEntry.Gui.Tooltip
+        @ConfigEntry.BoundedDiscrete(min = 1, max = 30)
+        @Comment("Controls how many jigsaw expansions are attempted.")
+        public int SIZE = 7;
+    }
 
-    public Structure IGLOO = new Structure(7);
+    @Config(name = "dungeon")
+    public static class Dungeon implements ConfigData {
 
-    public Structure DUNGEON = new Structure(8);
+        @ConfigEntry.Gui.Tooltip
+        @ConfigEntry.BoundedDiscrete(min = 1, max = 30)
+        @Comment("Controls how many jigsaw expansions are attempted.")
+        public int SIZE = 8;
+    }
 
-    public Structure PILLAGER = new Structure(8);
+    @Config(name = "pillager")
+    public static class Pillager implements ConfigData {
 
+        @ConfigEntry.Gui.Tooltip
+        @ConfigEntry.BoundedDiscrete(min = 1, max = 30)
+        @Comment("Controls how many jigsaw expansions are attempted.")
+        public int SIZE = 8;
+    }
 }

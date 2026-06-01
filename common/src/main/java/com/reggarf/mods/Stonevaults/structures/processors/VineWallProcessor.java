@@ -14,7 +14,8 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlac
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
-import org.jetbrains.annotations.Nullable;
+
+
 
 public class VineWallProcessor extends StructureProcessor {
 
@@ -29,7 +30,7 @@ public class VineWallProcessor extends StructureProcessor {
         this.probability = probability;
     }
 
-    @Nullable
+
     @Override
     public StructureTemplate.StructureBlockInfo processBlock(
             LevelReader level,

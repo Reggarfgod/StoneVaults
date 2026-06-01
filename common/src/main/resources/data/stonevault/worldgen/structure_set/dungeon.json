@@ -1,14 +1,14 @@
 {
   "structures": [
     {
-      "structure": "stonevaults:pillager_dungeon",
+      "structure": "stonevault:dungeon",
       "weight": 1
     }
   ],
   "placement": {
     "type": "minecraft:random_spread",
-    "spacing": 36,
-    "separation": 14,
-    "salt": 834729451
+    "spacing": 64,
+    "separation": 32,
+    "salt": 987654321
   }
 }

@@ -1,7 +1,7 @@
 {
   "structures": [
     {
-      "structure": "stonevaults:magetower",
+      "structure": "stonevault:pillager_dungeon",
       "weight": 1
     }
   ],
@@ -9,6 +9,6 @@
     "type": "minecraft:random_spread",
     "spacing": 64,
     "separation": 32,
-    "salt": 567834921
+    "salt": 834729451
   }
 }

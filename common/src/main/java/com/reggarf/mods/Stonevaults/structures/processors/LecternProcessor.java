@@ -14,14 +14,14 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructurePlac
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
-import org.jetbrains.annotations.Nullable;
+
 
 public class LecternProcessor extends StructureProcessor {
 
     public static final Codec<LecternProcessor> CODEC =
             Codec.unit(LecternProcessor::new);
 
-    @Nullable
+
     @Override
     public StructureTemplate.StructureBlockInfo processBlock(
             LevelReader levelReader,

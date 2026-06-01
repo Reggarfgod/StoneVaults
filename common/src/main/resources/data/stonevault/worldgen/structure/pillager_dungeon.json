@@ -1,5 +1,5 @@
 {
-  "type": "stonevaults:pillager_dungeon",
+  "type": "stonevault:pillager_dungeon",
   "biomes": "#stonevaults:has_structure/pillager_dungeon",
   "step": "underground_structures",
   "spawn_overrides": {},

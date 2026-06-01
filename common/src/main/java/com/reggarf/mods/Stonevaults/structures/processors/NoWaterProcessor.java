@@ -10,14 +10,15 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProc
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorType;
 import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate;
 import net.minecraft.world.level.material.FluidState;
-import org.jetbrains.annotations.Nullable;
+
+
 
 public class NoWaterProcessor extends StructureProcessor {
 
     public static final Codec<NoWaterProcessor> CODEC =
             Codec.unit(NoWaterProcessor::new);
 
-    @Nullable
+
     @Override
     public StructureTemplate.StructureBlockInfo processBlock(
             LevelReader level,

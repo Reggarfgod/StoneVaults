@@ -8,28 +8,33 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "https://www.curseforge.com/minecraft/mc-mods/underground-villages-stoneholm",
-        "sources": "https://github.com/Reggarfgod/underground-village",
-        "issues": "https://github.com/Reggarfgod/Underground-Village/issues",
+        "homepage": "https://www.curseforge.com/members/reggarf/projects",
+        "sources": "https://github.com/Reggarfgod/StoneVaults",
+        "issues": "https://github.com/Reggarfgod/StoneVaults/issues",
         "discord": "https://discord.gg/JBFNW3wdTm"
     },
     "license": "${license}",
-    "icon": "assets/modid/${mod_id}.png",
+    "icon": "stonevault.png",
     "environment": "*",
     "entrypoints": {
         "main": [
           "com.reggarf.mods.StonevaultsFabric.StonevaultsFabric"
+        ],
+        "modmenu": [
+            "com.reggarf.mods.StonevaultsFabric.config.MenuIntegration"
         ]
     },
     "mixins": [
-        "${mod_id}.mixins.json",
-        "${mod_id}.fabric.mixins.json"
+        "stonevault.mixins.json",
+        "stonevault.fabric.mixins.json"
     ],
     "depends": {
         "fabricloader": ">=0.14",
         "fabric": "*",
         "minecraft": "${minecraft_version}",
-        "java": ">=17"
+        "java": ">=17",
+        "cloth-config2": "*",
+        "modmenu": "*"
     },
     "suggests": {
         "another-mod": "*"

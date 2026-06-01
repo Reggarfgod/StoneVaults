@@ -44,11 +44,16 @@ legacyForge {
 }
 
 sourceSets.main.resources.srcDir 'src/generated/resources'
-
+repositories {
+    maven { url "https://maven.shedaniel.me/" }
+    maven {
+        url "https://cursemaven.com"
+    }
+}
 dependencies {
     compileOnly project(":common")
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-
+    modApi("me.shedaniel.cloth:cloth-config-forge:11.1.136")
 }
 
 jar {

@@ -5,9 +5,9 @@ import com.reggarf.mods.Stonevaults.platform.Services;
 import com.reggarf.mods.Stonevaults.register.StonevaultStructures;
 import com.reggarf.mods.Stonevaults.register.StonevaultsProcessors;
 import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.Items;
+import me.shedaniel.autoconfig.serializer.PartitioningSerializer;
 
 // This class is part of the common project meaning it is shared between all supported loaders. Code written here can only
 // import and access the vanilla codebase, libraries used by vanilla, and optionally third party libraries that provide
@@ -19,11 +19,11 @@ public class CommonClass {
     // write the majority of your code here and load it from your loader specific projects. This example has some
     // code that gets invoked by the entry point of the loader specific projects.
     public static void init() {
-        AutoConfig.register(StonevaultsConfig.class, JanksonConfigSerializer::new);
+        AutoConfig.register(
+                StonevaultsConfig.class,
+                PartitioningSerializer.wrap(JanksonConfigSerializer::new)
+        );
         CONFIG = AutoConfig.getConfigHolder(StonevaultsConfig.class).getConfig();
-        StonevaultStructures.registerStructures();
-        StonevaultsProcessors.registerProcessors();
-        
 
         if (Services.PLATFORM.isModLoaded("Stonevaults")) {
 

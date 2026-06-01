@@ -110,7 +110,7 @@
         "processor_type": "minecraft:rule"
       },
       {
-        "processor_type": "stonevaults:vinewall_processor",
+        "processor_type": "stonevault:vinewall_processor",
         "probability": 0.55
       }
     ]

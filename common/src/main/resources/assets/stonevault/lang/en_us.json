@@ -1,0 +1,18 @@
+{
+  "text.autoconfig.stonevault.title": "Stonevaults Configuration",
+
+  "text.autoconfig.stonevault.category.magetower": "Mage Tower",
+  "text.autoconfig.stonevault.category.igloo": "Igloo",
+  "text.autoconfig.stonevault.category.dungeon": "Dungeon",
+  "text.autoconfig.stonevault.category.pillager": "Pillager Dungeon",
+
+  "text.autoconfig.stonevault.option.MAGETOWER.SIZE": "Structure Size",
+  "text.autoconfig.stonevault.option.IGLOO.SIZE": "Structure Size",
+  "text.autoconfig.stonevault.option.DUNGEON.SIZE": "Structure Size",
+  "text.autoconfig.stonevault.option.PILLAGER.SIZE": "Structure Size",
+
+  "text.autoconfig.stonevault.option.MAGETOWER.SIZE.@Tooltip": "Controls how many jigsaw expansions are attempted for Mage Towers.",
+  "text.autoconfig.stonevault.option.IGLOO.SIZE.@Tooltip": "Controls how many jigsaw expansions are attempted for Igloos.",
+  "text.autoconfig.stonevault.option.DUNGEON.SIZE.@Tooltip": "Controls how many jigsaw expansions are attempted for Dungeons.",
+  "text.autoconfig.stonevault.option.PILLAGER.SIZE.@Tooltip": "Controls how many jigsaw expansions are attempted for Pillager Dungeons."
+}

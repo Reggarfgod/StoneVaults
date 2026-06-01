@@ -1,5 +1,5 @@
 {
-  "type": "stonevaults:magetower",
+  "type": "stonevault:magetower",
   "biomes": "#stonevaults:has_structure/magetower",
   "step": "surface_structures",
   "spawn_overrides": {},

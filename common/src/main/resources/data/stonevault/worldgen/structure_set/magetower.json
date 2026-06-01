@@ -1,7 +1,7 @@
 {
   "structures": [
     {
-      "structure": "stonevaults:dungeon",
+      "structure": "stonevault:magetower",
       "weight": 1
     }
   ],
@@ -9,6 +9,6 @@
     "type": "minecraft:random_spread",
     "spacing": 64,
     "separation": 32,
-    "salt": 987654321
+    "salt": 567834921
   }
 }

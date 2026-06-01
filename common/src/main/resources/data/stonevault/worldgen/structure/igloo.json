@@ -1,5 +1,5 @@
 {
-  "type": "stonevaults:igloo",
+  "type": "stonevault:igloo",
   "biomes": "#stonevaults:has_structure/igloo",
   "step": "surface_structures",
   "spawn_overrides": {},
