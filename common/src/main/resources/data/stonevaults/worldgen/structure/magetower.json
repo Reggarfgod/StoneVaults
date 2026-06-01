@@ -1,0 +1,7 @@
+{
+  "type": "stonevaults:magetower",
+  "biomes": "#stonevaults:has_structure/magetower",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "beard_thin"
+}

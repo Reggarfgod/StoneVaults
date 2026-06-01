@@ -1,0 +1,24 @@
+{
+  "name": "stonevaults:magetower/sidetower_bottom",
+  "fallback": "stonevaults:magetower/sidetower_walkway_fallback",
+  "elements": [
+    {
+      "weight": 3,
+      "element": {
+        "location": "stonevaults:magetower/sidetower/entrance_01",
+        "processors": "stonevaults:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "stonevaults:magetower/sidetower/walkway_fallback",
+        "processors": "stonevaults:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

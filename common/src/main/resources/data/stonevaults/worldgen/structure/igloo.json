@@ -1,0 +1,7 @@
+{
+  "type": "stonevaults:igloo",
+  "biomes": "#stonevaults:has_structure/igloo",
+  "step": "surface_structures",
+  "spawn_overrides": {},
+  "terrain_adaptation": "beard_thin"
+}

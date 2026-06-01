@@ -1,0 +1,42 @@
+{
+  "name": "stonevaults:dungeon/dungeon_treasure",
+  "fallback": "stonevaults:dungeon/dungeon_treasure",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "stonevaults:dungeon/treasure/mooshroom_king",
+        "processors": "stonevaults:dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "stonevaults:dungeon/treasure/tiny_cap",
+        "processors": "stonevaults:dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "stonevaults:dungeon/treasure/egg",
+        "processors": "stonevaults:dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "stonevaults:dungeon/treasure/parrot",
+        "processors": "stonevaults:dungeon",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

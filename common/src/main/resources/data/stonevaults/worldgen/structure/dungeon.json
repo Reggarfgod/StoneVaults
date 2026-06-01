@@ -1,0 +1,7 @@
+{
+  "type": "stonevaults:dungeon",
+  "biomes": "#stonevaults:has_structure/dungeon",
+  "step": "surface_structures",
+  "terrain_adaptation": "beard_thin",
+  "spawn_overrides": {}
+}
