@@ -13,25 +13,25 @@ public class FabricStructures {
 
         StonevaultStructures.MAGETOWER = Registry.register(
                 BuiltInRegistries.STRUCTURE_TYPE,
-                new ResourceLocation(Constants.MOD_ID, "magetower"),
+                ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "magetower"),
                 () -> MageTowerStructure.CODEC
         );
 
         StonevaultStructures.IGLOO = Registry.register(
                 BuiltInRegistries.STRUCTURE_TYPE,
-                new ResourceLocation(Constants.MOD_ID, "igloo"),
+                ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "igloo"),
                 () -> IglooStructure.CODEC
         );
 
         StonevaultStructures.DUNGEON = Registry.register(
                 BuiltInRegistries.STRUCTURE_TYPE,
-                new ResourceLocation(Constants.MOD_ID, "dungeon"),
+                ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "dungeon"),
                 () -> DungeonStructure.CODEC
         );
 
         StonevaultStructures.PILLAGER_DUNGEON = Registry.register(
                 BuiltInRegistries.STRUCTURE_TYPE,
-                new ResourceLocation(Constants.MOD_ID, "pillager_dungeon"),
+                ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "pillager_dungeon"),
                 () -> PillagerDungeonStructure.CODEC
         );
     }

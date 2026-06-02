@@ -1,6 +1,7 @@
 package com.reggarf.mods.Stonevaults.structures.processors;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.reggarf.mods.Stonevaults.register.StonevaultsProcessors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.LevelReader;
@@ -15,8 +16,8 @@ import net.minecraft.world.level.material.FluidState;
 
 public class NoWaterProcessor extends StructureProcessor {
 
-    public static final Codec<NoWaterProcessor> CODEC =
-            Codec.unit(NoWaterProcessor::new);
+    public static final MapCodec<NoWaterProcessor> CODEC =
+            MapCodec.unit(NoWaterProcessor::new);
 
 
     @Override

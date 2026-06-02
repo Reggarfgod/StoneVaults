@@ -11,6 +11,10 @@ import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 @Config.Gui.Background("minecraft:textures/block/deepslate_tiles.png")
 public class StonevaultsConfig extends PartitioningSerializer.GlobalData {
 
+    @ConfigEntry.Category("general")
+    @ConfigEntry.Gui.TransitiveObject()
+    public General GENERAL = new General();
+
     @ConfigEntry.Category("magetower")
     @ConfigEntry.Gui.TransitiveObject()
     public MageTower MAGETOWER = new MageTower();
@@ -61,5 +65,13 @@ public class StonevaultsConfig extends PartitioningSerializer.GlobalData {
         @ConfigEntry.BoundedDiscrete(min = 1, max = 30)
         @Comment("Controls how many jigsaw expansions are attempted.")
         public int SIZE = 8;
+    }
+
+    @Config(name = "general")
+    public static class General implements ConfigData {
+
+        @ConfigEntry.Gui.Tooltip
+        @Comment("Show welcome message on join")
+        public boolean enableInGameMessage = true;
     }
 }

@@ -21,11 +21,13 @@ build
 # other
 eclipse
 
-run/*
-!run/saves/
-run/saves/*
-!run/saves/Buildworld/
-run/saves/Buildworld/advancements/*
-run/saves/Buildworld/data/*
-run/saves/Buildworld/playerdata/*
-run/saves/Buildworld/stats/*
+
+run
+runs/*
+!runs/saves/
+runs/saves/*
+!runs/saves/Buildworld/
+runs/saves/Buildworld/advancements/*
+runs/saves/Buildworld/data/*
+runs/saves/Buildworld/playerdata/*
+runs/saves/Buildworld/stats/*

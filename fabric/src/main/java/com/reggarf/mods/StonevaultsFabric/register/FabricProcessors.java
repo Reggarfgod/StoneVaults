@@ -15,19 +15,19 @@ public class FabricProcessors {
 
         StonevaultsProcessors.VINEWALL_PROCESSOR = Registry.register(
                 BuiltInRegistries.STRUCTURE_PROCESSOR,
-                new ResourceLocation(Constants.MOD_ID, "vinewall_processor"),
+                ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "vinewall_processor"),
                 () -> VineWallProcessor.CODEC
         );
 
         StonevaultsProcessors.NOWATER_PROCESSOR = Registry.register(
                 BuiltInRegistries.STRUCTURE_PROCESSOR,
-                new ResourceLocation(Constants.MOD_ID, "nowater_processor"),
+                ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "nowater_processor"),
                 () -> NoWaterProcessor.CODEC
         );
 
         StonevaultsProcessors.LECTERN_PROCESSOR = Registry.register(
                 BuiltInRegistries.STRUCTURE_PROCESSOR,
-                new ResourceLocation(Constants.MOD_ID, "lectern_processor"),
+                ResourceLocation.fromNamespaceAndPath(Constants.MOD_ID, "lectern_processor"),
                 () -> LecternProcessor.CODEC
         );
     }

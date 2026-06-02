@@ -1,0 +1,4 @@
+{
+	// Show welcome message on join
+	"enableInGameMessage": true
+}

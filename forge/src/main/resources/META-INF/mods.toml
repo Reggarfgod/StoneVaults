@@ -32,3 +32,10 @@ mandatory = true
 versionRange = "[11.1.136,)"
 ordering = "NONE"
 side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "better_lib"
+mandatory = true
+versionRange = "[1.0.109,)"
+ordering = "NONE"
+side = "BOTH"

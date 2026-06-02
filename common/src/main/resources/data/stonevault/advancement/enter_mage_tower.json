@@ -1,0 +1,23 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:enchanting_table"
+    },
+    "title": {
+      "translate": "advancement.stonevaults.enter_mage_tower.title"
+    },
+    "description": {
+      "translate": "advancement.stonevaults.enter_mage_tower.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "code_unlock": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

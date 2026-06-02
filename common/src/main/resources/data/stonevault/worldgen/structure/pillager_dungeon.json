@@ -3,5 +3,5 @@
   "biomes": "#stonevaults:has_structure/pillager_dungeon",
   "step": "underground_structures",
   "spawn_overrides": {},
-  "terrain_adaptation": "none"
+  "terrain_adaptation": "beard_thin"
 }

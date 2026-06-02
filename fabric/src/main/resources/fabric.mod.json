@@ -34,7 +34,8 @@
         "minecraft": "${minecraft_version}",
         "java": ">=17",
         "cloth-config2": "*",
-        "modmenu": "*"
+        "modmenu": "*",
+        "better_lib": "*"
     },
     "suggests": {
         "another-mod": "*"

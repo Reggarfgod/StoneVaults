@@ -1,6 +1,7 @@
 package com.reggarf.mods.Stonevaults.structures.processors;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.reggarf.mods.Stonevaults.register.StonevaultsProcessors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -19,10 +20,9 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemp
 
 public class VineWallProcessor extends StructureProcessor {
 
-    public static final Codec<VineWallProcessor> CODEC =
+    public static final MapCodec<VineWallProcessor> CODEC =
             Codec.FLOAT.fieldOf("probability")
-                    .xmap(VineWallProcessor::new, processor -> processor.probability)
-                    .codec();
+                    .xmap(VineWallProcessor::new, processor -> processor.probability);
 
     private final float probability;
 

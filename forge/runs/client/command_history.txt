@@ -1,0 +1,21 @@
+/locate structure stonevault:dungeon
+/tp @s 368 ~ -688
+/gamemode survival
+/gamemode spectator
+/gamemode creative
+/gamemode spectator
+/gamemode creative
+/locate structure stonevault:magetower
+/tp @s 80 ~ 256
+/gamemode spectator
+/gamemode creative
+/locate structure stonevault:igloo
+/tp @s -3152 ~ -2944
+/gamemode spectator
+/gamemode creative
+/gamemode spectator
+/locate structure stonevault:pillager_dungeon
+/tp @s -3792 ~ -2880
+/gamemode creative
+/locate structure stonevault:dungeon
+/tp @s -576 ~ -768

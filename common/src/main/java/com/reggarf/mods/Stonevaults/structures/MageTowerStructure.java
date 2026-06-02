@@ -1,6 +1,7 @@
 package com.reggarf.mods.Stonevaults.structures;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.reggarf.mods.Stonevaults.CommonClass;
 import com.reggarf.mods.Stonevaults.Constants;
 import com.reggarf.mods.Stonevaults.register.StonevaultStructures;
@@ -12,19 +13,22 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureType;
+import net.minecraft.world.level.levelgen.structure.pools.DimensionPadding;
 import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
+import net.minecraft.world.level.levelgen.structure.pools.alias.PoolAliasLookup;
+import net.minecraft.world.level.levelgen.structure.templatesystem.LiquidSettings;
 
 
 import java.util.Optional;
 
 public class MageTowerStructure extends Structure {
 
-    public static final Codec<MageTowerStructure> CODEC =
+    public static final MapCodec<MageTowerStructure> CODEC =
             simpleCodec(MageTowerStructure::new);
 
     public static final ResourceLocation START_POOL =
-            new ResourceLocation(
+            ResourceLocation.fromNamespaceAndPath(
                     "stonevaults",
                     "startpool_magetower"
             );
@@ -73,7 +77,10 @@ public class MageTowerStructure extends Structure {
                 startPos,
                 false,
                 Optional.empty(),
-                128
+                128,
+                PoolAliasLookup.EMPTY,
+                new DimensionPadding(0, 0),
+                LiquidSettings.IGNORE_WATERLOGGING
         );
     }
 

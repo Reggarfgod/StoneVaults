@@ -1,6 +1,7 @@
 package com.reggarf.mods.Stonevaults.structures;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.reggarf.mods.Stonevaults.CommonClass;
 import com.reggarf.mods.Stonevaults.Constants;
 import com.reggarf.mods.Stonevaults.register.StonevaultStructures;
@@ -15,16 +16,19 @@ import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureType;
 import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
+import net.minecraft.world.level.levelgen.structure.pools.alias.PoolAliasLookup;
+import net.minecraft.world.level.levelgen.structure.structures.JigsawStructure;
+import net.minecraft.world.level.levelgen.structure.templatesystem.LiquidSettings;
 
 import java.util.Optional;
 
 public class IglooStructure extends Structure {
 
-    public static final Codec<IglooStructure> CODEC =
+    public static final MapCodec<IglooStructure> CODEC =
             simpleCodec(IglooStructure::new);
 
     public static final ResourceLocation START_POOL =
-            new ResourceLocation(
+           ResourceLocation.fromNamespaceAndPath(
                     "stonevaults",
                     "startpool_igloo"
             );
@@ -71,7 +75,10 @@ public class IglooStructure extends Structure {
                 new BlockPos(x, y + 1, z),
                 false,
                 Optional.empty(),
-                128
+                128,
+                PoolAliasLookup.EMPTY,
+                JigsawStructure.DEFAULT_DIMENSION_PADDING,
+                LiquidSettings.IGNORE_WATERLOGGING
         );
     }
 

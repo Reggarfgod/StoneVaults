@@ -1,0 +1,23 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "id": "minecraft:crossbow"
+    },
+    "title": {
+      "translate": "advancement.stonevaults.enter_pillager_dungeon.title"
+    },
+    "description": {
+      "translate": "advancement.stonevaults.enter_pillager_dungeon.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "code_unlock": {
+      "trigger": "minecraft:impossible"
+    }
+  }
+}

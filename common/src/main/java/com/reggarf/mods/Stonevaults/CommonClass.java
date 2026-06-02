@@ -1,5 +1,6 @@
 package com.reggarf.mods.Stonevaults;
 
+import com.reggarf.mods.Stonevaults.api.JoinPlugin;
 import com.reggarf.mods.Stonevaults.config.StonevaultsConfig;
 import com.reggarf.mods.Stonevaults.platform.Services;
 import com.reggarf.mods.Stonevaults.register.StonevaultStructures;
@@ -19,10 +20,8 @@ public class CommonClass {
     // write the majority of your code here and load it from your loader specific projects. This example has some
     // code that gets invoked by the entry point of the loader specific projects.
     public static void init() {
-        AutoConfig.register(
-                StonevaultsConfig.class,
-                PartitioningSerializer.wrap(JanksonConfigSerializer::new)
-        );
+        JoinPlugin.register();
+        AutoConfig.register(StonevaultsConfig.class, PartitioningSerializer.wrap(JanksonConfigSerializer::new));
         CONFIG = AutoConfig.getConfigHolder(StonevaultsConfig.class).getConfig();
 
         if (Services.PLATFORM.isModLoaded("Stonevaults")) {

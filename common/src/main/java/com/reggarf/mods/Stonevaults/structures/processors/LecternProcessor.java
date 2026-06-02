@@ -1,6 +1,7 @@
 package com.reggarf.mods.Stonevaults.structures.processors;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.reggarf.mods.Stonevaults.register.StonevaultsProcessors;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -18,8 +19,8 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemp
 
 public class LecternProcessor extends StructureProcessor {
 
-    public static final Codec<LecternProcessor> CODEC =
-            Codec.unit(LecternProcessor::new);
+    public static final MapCodec<LecternProcessor> CODEC =
+            MapCodec.unit(LecternProcessor::new);
 
 
     @Override
@@ -45,7 +46,7 @@ public class LecternProcessor extends StructureProcessor {
             bookTag.putString("filtered_title", "???");
 
             ListTag pages = new ListTag();
-            pages.add(StringTag.valueOf(Component.Serializer.toJson(Component.literal("???"))));
+            Component.Serializer.toJson(Component.literal("???"), levelReader.registryAccess());
             bookTag.put("pages", pages);
 
             book.put("tag", bookTag);

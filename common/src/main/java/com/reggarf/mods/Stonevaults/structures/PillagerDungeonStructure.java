@@ -1,6 +1,7 @@
 package com.reggarf.mods.Stonevaults.structures;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.reggarf.mods.Stonevaults.CommonClass;
 import com.reggarf.mods.Stonevaults.Constants;
 import com.reggarf.mods.Stonevaults.register.StonevaultStructures;
@@ -19,6 +20,9 @@ import net.minecraft.world.level.levelgen.structure.StructureSpawnOverride;
 import net.minecraft.world.level.levelgen.structure.StructureType;
 import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
+import net.minecraft.world.level.levelgen.structure.pools.alias.PoolAliasLookup;
+import net.minecraft.world.level.levelgen.structure.structures.JigsawStructure;
+import net.minecraft.world.level.levelgen.structure.templatesystem.LiquidSettings;
 
 
 import java.util.Map;
@@ -26,14 +30,14 @@ import java.util.Optional;
 
 public class PillagerDungeonStructure extends Structure {
 
-    public static final Codec<PillagerDungeonStructure> CODEC =
+    public static final MapCodec<PillagerDungeonStructure> CODEC =
             simpleCodec(PillagerDungeonStructure::new);
 
     public static final ResourceLocation START_POOL =
-            new ResourceLocation("stonevaults", "startpool_pillager_dungeon");
+            ResourceLocation.fromNamespaceAndPath("stonevaults", "startpool_pillager_dungeon");
 
     public static final ResourceLocation START_POOL_LONG =
-            new ResourceLocation("stonevaults", "startpool_pillager_dungeon_long");
+            ResourceLocation.fromNamespaceAndPath("stonevaults", "startpool_pillager_dungeon_long");
 
     public PillagerDungeonStructure(StructureSettings settings) {
         super(settings);
@@ -89,7 +93,10 @@ public class PillagerDungeonStructure extends Structure {
                 startPos,
                 false,
                 Optional.empty(),
-                128
+                128,
+                PoolAliasLookup.EMPTY,
+                JigsawStructure.DEFAULT_DIMENSION_PADDING,
+                LiquidSettings.IGNORE_WATERLOGGING
         );
     }
 

@@ -5,6 +5,7 @@ import com.reggarf.mods.Stonevaults.Constants;
 import com.reggarf.mods.Stonevaults.register.StonevaultsProcessors;
 import com.reggarf.mods.StonevaultsFabric.register.FabricProcessors;
 import com.reggarf.mods.StonevaultsFabric.register.FabricStructures;
+import com.reggarf.mods.StonevaultsFabric.register.StructureEnterEvents;
 import net.fabricmc.api.ModInitializer;
 
 public class StonevaultsFabric implements ModInitializer {
@@ -14,6 +15,7 @@ public class StonevaultsFabric implements ModInitializer {
         Constants.LOG.info("Hello Fabric world!");
         FabricStructures.register();
         FabricProcessors.register();
+        StructureEnterEvents.register();
         CommonClass.init();
     }
 }
