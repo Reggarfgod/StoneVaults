@@ -8,8 +8,9 @@ import com.reggarf.mods.Stonevaults.register.StonevaultStructures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureType;
@@ -17,6 +18,7 @@ import net.minecraft.world.level.levelgen.structure.pools.DimensionPadding;
 import net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement;
 import net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool;
 import net.minecraft.world.level.levelgen.structure.pools.alias.PoolAliasLookup;
+import net.minecraft.world.level.levelgen.structure.structures.JigsawStructure;
 import net.minecraft.world.level.levelgen.structure.templatesystem.LiquidSettings;
 
 
@@ -27,8 +29,8 @@ public class MageTowerStructure extends Structure {
     public static final MapCodec<MageTowerStructure> CODEC =
             simpleCodec(MageTowerStructure::new);
 
-    public static final ResourceLocation START_POOL =
-            ResourceLocation.fromNamespaceAndPath(
+    public static final Identifier START_POOL =
+            Identifier.fromNamespaceAndPath(
                     "stonevaults",
                     "startpool_magetower"
             );
@@ -55,8 +57,8 @@ public class MageTowerStructure extends Structure {
 
         Holder<StructureTemplatePool> startPool =
                 context.registryAccess()
-                        .registryOrThrow(Registries.TEMPLATE_POOL)
-                        .getHolderOrThrow(
+                        .lookupOrThrow(Registries.TEMPLATE_POOL)
+                        .getOrThrow(
                                 ResourceKey.create(
                                         Registries.TEMPLATE_POOL,
                                         START_POOL
@@ -77,7 +79,7 @@ public class MageTowerStructure extends Structure {
                 startPos,
                 false,
                 Optional.empty(),
-                128,
+                new JigsawStructure.MaxDistance(128),
                 PoolAliasLookup.EMPTY,
                 new DimensionPadding(0, 0),
                 LiquidSettings.IGNORE_WATERLOGGING

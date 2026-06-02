@@ -1,6 +1,7 @@
 package com.reggarf.mods.Stonevaults.structures.processors;
 
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.JsonOps;
 import com.mojang.serialization.MapCodec;
 import com.reggarf.mods.Stonevaults.register.StonevaultsProcessors;
 import net.minecraft.core.BlockPos;
@@ -8,6 +9,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.StringTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.ComponentSerialization;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LecternBlock;
@@ -46,7 +48,8 @@ public class LecternProcessor extends StructureProcessor {
             bookTag.putString("filtered_title", "???");
 
             ListTag pages = new ListTag();
-            Component.Serializer.toJson(Component.literal("???"), levelReader.registryAccess());
+            ComponentSerialization.CODEC.encodeStart(JsonOps.INSTANCE, Component.literal("???")
+            ).getOrThrow();
             bookTag.put("pages", pages);
 
             book.put("tag", bookTag);

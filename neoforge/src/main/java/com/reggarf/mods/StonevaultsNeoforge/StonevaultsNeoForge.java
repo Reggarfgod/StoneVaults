@@ -33,10 +33,5 @@ public class StonevaultsNeoForge {
         CommonClass.init();
 
     }
-    @SubscribeEvent
-    public static void onClientSetup(FMLClientSetupEvent event) {
-        ModLoadingContext.get().registerExtensionPoint(IConfigScreenFactory.class, () -> (container, parent) -> {
-            return AutoConfig.getConfigScreen(StonevaultsConfig.class, parent).get();
-        });
-    }
+
 }

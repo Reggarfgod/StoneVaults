@@ -6,8 +6,9 @@ import com.reggarf.mods.Stonevaults.register.StonevaultStructures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureType;
@@ -24,8 +25,8 @@ public class DungeonStructure extends Structure {
     public static final MapCodec<DungeonStructure> CODEC =
             simpleCodec(DungeonStructure::new);
 
-    public static final ResourceLocation START_POOL =
-            ResourceLocation.fromNamespaceAndPath(
+    public static final Identifier START_POOL =
+            Identifier.fromNamespaceAndPath(
                     "stonevaults",
                     "startpool_dungeon"
             );
@@ -58,8 +59,8 @@ public class DungeonStructure extends Structure {
 
         Holder<StructureTemplatePool> startPool =
                 context.registryAccess()
-                        .registryOrThrow(Registries.TEMPLATE_POOL)
-                        .getHolderOrThrow(
+                        .lookupOrThrow(Registries.TEMPLATE_POOL)
+                        .getOrThrow(
                                 ResourceKey.create(
                                         Registries.TEMPLATE_POOL,
                                         START_POOL
@@ -80,7 +81,7 @@ public class DungeonStructure extends Structure {
                 startPos,
                 false,
                 Optional.empty(),
-                128,
+                new JigsawStructure.MaxDistance(128),
                 PoolAliasLookup.EMPTY,
                 JigsawStructure.DEFAULT_DIMENSION_PADDING,
                 LiquidSettings.IGNORE_WATERLOGGING

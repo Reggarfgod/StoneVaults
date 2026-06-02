@@ -8,9 +8,10 @@ import com.reggarf.mods.Stonevaults.register.StonevaultStructures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.random.WeightedRandomList;
+
+import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.MobSpawnSettings;
@@ -33,11 +34,11 @@ public class PillagerDungeonStructure extends Structure {
     public static final MapCodec<PillagerDungeonStructure> CODEC =
             simpleCodec(PillagerDungeonStructure::new);
 
-    public static final ResourceLocation START_POOL =
-            ResourceLocation.fromNamespaceAndPath("stonevaults", "startpool_pillager_dungeon");
+    public static final Identifier START_POOL =
+            Identifier.fromNamespaceAndPath("stonevaults", "startpool_pillager_dungeon");
 
-    public static final ResourceLocation START_POOL_LONG =
-            ResourceLocation.fromNamespaceAndPath("stonevaults", "startpool_pillager_dungeon_long");
+    public static final Identifier START_POOL_LONG =
+            Identifier.fromNamespaceAndPath("stonevaults", "startpool_pillager_dungeon_long");
 
     public PillagerDungeonStructure(StructureSettings settings) {
         super(settings);
@@ -67,15 +68,15 @@ public class PillagerDungeonStructure extends Structure {
         boolean highDungeon =
                 terrainHeight >= seaLevel + 12;
 
-        ResourceLocation selectedPool =
+        Identifier selectedPool =
                 highDungeon
                         ? START_POOL_LONG
                         : START_POOL;
 
         Holder<StructureTemplatePool> startPool =
                 context.registryAccess()
-                        .registryOrThrow(Registries.TEMPLATE_POOL)
-                        .getHolderOrThrow(
+                        .lookupOrThrow(Registries.TEMPLATE_POOL)
+                        .getOrThrow(
                                 ResourceKey.create(
                                         Registries.TEMPLATE_POOL,
                                         selectedPool
@@ -93,7 +94,7 @@ public class PillagerDungeonStructure extends Structure {
                 startPos,
                 false,
                 Optional.empty(),
-                128,
+                new JigsawStructure.MaxDistance(128),
                 PoolAliasLookup.EMPTY,
                 JigsawStructure.DEFAULT_DIMENSION_PADDING,
                 LiquidSettings.IGNORE_WATERLOGGING
@@ -107,24 +108,31 @@ public class PillagerDungeonStructure extends Structure {
 
     @Override
     public Map<MobCategory, StructureSpawnOverride> spawnOverrides() {
+
+        WeightedList.Builder<MobSpawnSettings.SpawnerData> builder =
+                WeightedList.builder();
+
+        builder.add( new MobSpawnSettings.SpawnerData(
+                EntityType.VINDICATOR,
+                        1,
+                        2
+                ),
+                10
+        );
+
+        builder.add( new MobSpawnSettings.SpawnerData(
+                        EntityType.PILLAGER,
+                        1,
+                        3
+                ),
+                30
+        );
+
         return Map.of(
                 MobCategory.MONSTER,
                 new StructureSpawnOverride(
                         StructureSpawnOverride.BoundingBoxType.PIECE,
-                        WeightedRandomList.create(
-                                new MobSpawnSettings.SpawnerData(
-                                        EntityType.VINDICATOR,
-                                        10,
-                                        1,
-                                        2
-                                ),
-                                new MobSpawnSettings.SpawnerData(
-                                        EntityType.PILLAGER,
-                                        30,
-                                        1,
-                                        3
-                                )
-                        )
+                        builder.build()
                 )
         );
     }
