@@ -19,17 +19,20 @@
 <p>Can you conquer every structure, claim its treasures, and survive the endless monsters lurking within?</p>
 <p>Explore. Fight. Loot. Survive.</p>
 <hr>
-<h1 style="text-align: center;"><span style="color: rgb(255, 255, 255);"><strong>Gallery &amp; Showcase</strong></span></h1>
-<p class="isSelectedEnd">Check the image gallery for screenshots of all structures, interiors, loot rooms, and hidden secrets.</p>
+<h1 style="text-align: center;"><span style="color: #fff;"><strong>Gallery &amp; Showcase</strong></span></h1>
+<p>Check the image gallery for screenshots of all structures, interiors, loot rooms, and hidden secrets.</p>
 <hr>
-<h1 style="text-align: center;"><span style="color: rgb(255, 255, 255);"><strong>Video Showcase</strong></span></h1>
-<p>Watch the YouTube showcase video for a full tour of the structures, gameplay, loot, combat encounters, and exploration features.</p>
+<h1 style="text-align: center;"><span style="color: #fff;"><strong>Video Showcase</strong></span></h1>
+<p style="text-align: center;">Watch the YouTube showcase video for a full tour of the structures, gameplay, loot, combat encounters, and exploration features.</p>
+<p style="text-align: center;"><br><iframe title="YouTube video player" src="https://www.youtube.com/embed/-xxuAm2OwxA?si=KkZP7hh3tveIW0cY" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen"></iframe></p>
 <hr>
-<p>This Mod is a <span style="color: rgb(45, 194, 107);">Reforge of old mod </span>- <a href="https://www.curseforge.com/minecraft/mc-mods/stonevaults-dungeons-towers" target="_blank" rel="noopener">https://www.curseforge.com/minecraft/mc-mods/stonevaults-dungeons-towers</a>&nbsp; For <span style="color: rgb(241, 196, 15);">1.20.1 and above&nbsp;</span></p>
+<p>This Mod is a <span style="color: #2dc26b;">Reforge of old mod </span>- <a href="https://www.curseforge.com/minecraft/mc-mods/stonevaults-dungeons-towers" target="_blank" rel="nofollow noopener">https://www.curseforge.com/minecraft/mc-mods/stonevaults-dungeons-towers</a>&nbsp; For <span style="color: #f1c40f;">1.20.1 and above&nbsp;</span></p>
+<hr>
+<p><img src="https://media.forgecdn.net/attachments/description/1560486/description_3ee4409f-96db-4cfe-9120-19a0cfc0623a.jpg" alt="" width="850" height="1510"></p>
 <hr>
 <p><br><br><img src="https://media.forgecdn.net/attachments/description/1123746/description_41185ed0-3968-4c1b-ac5c-b3962fe450f1.png"></p>
 <hr>
 <h1 style="text-align: center;"><strong>THANKS TO OUR SPONSORS</strong></h1>
 <p style="text-align: center;"><strong>THANKS TO ZAP-HOSTING! Use code Reggarf-1047 for 20% off any order!</strong></p>
-<p style="text-align: center;"><strong><a href="https://www.curseforge.com/linkout?remoteUrl=https%253a%252f%252fzap-hosting.com%252freggarf" target="_blank" rel="nofollow noopener">https://zap-hosting.com/reggarf</a></strong></p>
+<p style="text-align: center;"><strong><a href="https://www.curseforge.com/linkout?remoteUrl=https://zap-hosting.com/reggarf" target="_blank" rel="nofollow noopener">https://zap-hosting.com/reggarf</a></strong></p>
 <hr>
