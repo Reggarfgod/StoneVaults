@@ -1,16 +1,13 @@
 package com.reggarf.mods.Stonevaults.structures;
 
-import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.reggarf.mods.Stonevaults.CommonClass;
-import com.reggarf.mods.Stonevaults.Constants;
 import com.reggarf.mods.Stonevaults.register.StonevaultStructures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.ChunkPos;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.structure.Structure;
@@ -28,8 +25,8 @@ public class IglooStructure extends Structure {
     public static final MapCodec<IglooStructure> CODEC =
             simpleCodec(IglooStructure::new);
 
-    public static final Identifier START_POOL =
-           Identifier.fromNamespaceAndPath(
+    public static final ResourceLocation START_POOL =
+            ResourceLocation.fromNamespaceAndPath(
                     "stonevaults",
                     "startpool_igloo"
             );

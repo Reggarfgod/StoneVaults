@@ -2,7 +2,7 @@ package com.reggarf.mods.StonevaultsNeoforge;
 
 import com.reggarf.mods.Stonevaults.Constants;
 import com.reggarf.mods.Stonevaults.config.StonevaultsConfig;
-import me.shedaniel.autoconfig.AutoConfigClient;
+import me.shedaniel.autoconfig.AutoConfig;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModLoadingContext;
@@ -17,7 +17,7 @@ public class NeoForgeClientEvents {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
         ModLoadingContext.get().registerExtensionPoint(IConfigScreenFactory.class, () -> (container, parent) -> {
-            return AutoConfigClient.getConfigScreen(StonevaultsConfig.class, parent).get();
+            return AutoConfig.getConfigScreen(StonevaultsConfig.class, parent).get();
         });
 
 

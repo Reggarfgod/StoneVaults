@@ -2,7 +2,7 @@ package com.reggarf.mods.Stonevaults.register;
 
 import net.minecraft.advancements.AdvancementHolder;
 import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.PlayerAdvancements;
 import net.minecraft.server.level.ServerPlayer;
@@ -27,7 +27,7 @@ public class StructureAdvancement {
 
     private static void award(ServerPlayer player, String advancementName) {
 
-        Identifier id = Identifier.fromNamespaceAndPath(
+        ResourceLocation id = ResourceLocation.fromNamespaceAndPath(
                 "stonevault",
                 advancementName
         );

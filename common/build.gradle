@@ -10,28 +10,10 @@ neoForge {
     if (at.exists()) {
         accessTransformers.from(at.absolutePath)
     }
-}
-
-repositories {
-    maven { url "https://maven.shedaniel.me/" }
-    maven {
-        url "https://cursemaven.com/"
+    parchment {
+        minecraftVersion = parchment_minecraft
+        mappingsVersion = parchment_version
     }
-    maven {
-        url "https://maven.terraformersmc.com/"
-        content {
-            includeGroup "dev.emi"
-            includeGroup "com.terraformersmc"
-        }
-    }
-}
-dependencies {
-    compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
-
-    compileOnly group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.3.5'
-    annotationProcessor group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.3.5'
-    implementation("me.shedaniel.cloth:cloth-config-neoforge:${project.cloth_config_version}")
-    implementation "curse.maven:better-library-1150683:${project.better_library_neoforge}"
 }
 
 configurations {
@@ -67,4 +49,26 @@ sourceSets.configureEach {
             }
         }
     }
+}
+
+repositories {
+    maven { url "https://maven.shedaniel.me/" }
+    maven {
+        url "https://cursemaven.com/"
+    }
+    maven {
+        url "https://maven.terraformersmc.com/"
+        content {
+            includeGroup "dev.emi"
+            includeGroup "com.terraformersmc"
+        }
+    }
+}
+dependencies {
+    compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
+    // fabric and neoforge both bundle mixinextras, so it is safe to use it in common
+    compileOnly group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.3.5'
+    annotationProcessor group: 'io.github.llamalad7', name: 'mixinextras-common', version: '0.3.5'
+    implementation("me.shedaniel.cloth:cloth-config-neoforge:${project.cloth_config_version}")
+    implementation "curse.maven:better-library-1150683:${project.better_library_neoforge}"
 }

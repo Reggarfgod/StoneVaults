@@ -1,16 +1,13 @@
 package com.reggarf.mods.Stonevaults.structures;
 
-import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.reggarf.mods.Stonevaults.CommonClass;
-import com.reggarf.mods.Stonevaults.Constants;
 import com.reggarf.mods.Stonevaults.register.StonevaultStructures;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -25,7 +22,6 @@ import net.minecraft.world.level.levelgen.structure.pools.alias.PoolAliasLookup;
 import net.minecraft.world.level.levelgen.structure.structures.JigsawStructure;
 import net.minecraft.world.level.levelgen.structure.templatesystem.LiquidSettings;
 
-
 import java.util.Map;
 import java.util.Optional;
 
@@ -34,11 +30,11 @@ public class PillagerDungeonStructure extends Structure {
     public static final MapCodec<PillagerDungeonStructure> CODEC =
             simpleCodec(PillagerDungeonStructure::new);
 
-    public static final Identifier START_POOL =
-            Identifier.fromNamespaceAndPath("stonevaults", "startpool_pillager_dungeon");
+    public static final ResourceLocation START_POOL =
+            ResourceLocation.fromNamespaceAndPath("stonevaults", "startpool_pillager_dungeon");
 
-    public static final Identifier START_POOL_LONG =
-            Identifier.fromNamespaceAndPath("stonevaults", "startpool_pillager_dungeon_long");
+    public static final ResourceLocation START_POOL_LONG =
+            ResourceLocation.fromNamespaceAndPath("stonevaults", "startpool_pillager_dungeon_long");
 
     public PillagerDungeonStructure(StructureSettings settings) {
         super(settings);
@@ -68,7 +64,7 @@ public class PillagerDungeonStructure extends Structure {
         boolean highDungeon =
                 terrainHeight >= seaLevel + 12;
 
-        Identifier selectedPool =
+        ResourceLocation selectedPool =
                 highDungeon
                         ? START_POOL_LONG
                         : START_POOL;
