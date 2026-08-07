@@ -2,7 +2,6 @@ package com.reggarf.mods.StonevaultsFabric;
 
 import com.reggarf.mods.Stonevaults.CommonClass;
 import com.reggarf.mods.Stonevaults.Constants;
-import com.reggarf.mods.Stonevaults.register.StonevaultsProcessors;
 import com.reggarf.mods.StonevaultsFabric.register.FabricProcessors;
 import com.reggarf.mods.StonevaultsFabric.register.FabricStructures;
 import com.reggarf.mods.StonevaultsFabric.register.StructureEnterEvents;

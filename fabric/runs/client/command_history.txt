@@ -1,0 +1,2 @@
+/locate structure stonevault:pillager_dungeon
+/tp @s -640 ~ 2000

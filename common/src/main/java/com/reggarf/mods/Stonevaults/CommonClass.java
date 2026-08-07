@@ -4,7 +4,6 @@ import com.reggarf.mods.Stonevaults.api.JoinPlugin;
 import com.reggarf.mods.Stonevaults.config.StonevaultsConfig;
 import com.reggarf.mods.Stonevaults.platform.Services;
 import com.reggarf.mods.Stonevaults.register.StonevaultStructures;
-import com.reggarf.mods.Stonevaults.register.StonevaultsProcessors;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.GsonConfigSerializer;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;

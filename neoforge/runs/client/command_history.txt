@@ -19,3 +19,7 @@
 /gamemode creative
 /locate structure stonevault:dungeon
 /tp @s -576 ~ -768
+/locate structure stonevault:pillager_dungeon
+/tp @s 352 ~ 192
+/gamemode spectator
+/gamemode survival

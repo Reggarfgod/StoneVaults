@@ -23,10 +23,7 @@ public class StonevaultsNeoForge {
         NeoForgeProcessors.register(bus);
 
         bus.addListener((FMLCommonSetupEvent event) -> {
-            event.enqueueWork(() -> {
-                NeoForgeStructures.finish();
-                NeoForgeProcessors.finish();
-            });
+            event.enqueueWork(NeoForgeStructures::finish);
         });
         // Use NeoForge to bootstrap the Common mod.
         Constants.LOG.info("Hello NeoForge world!");

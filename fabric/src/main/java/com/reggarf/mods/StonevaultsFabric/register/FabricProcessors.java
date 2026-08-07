@@ -1,7 +1,6 @@
 package com.reggarf.mods.StonevaultsFabric.register;
 
 import com.reggarf.mods.Stonevaults.Constants;
-import com.reggarf.mods.Stonevaults.register.StonevaultsProcessors;
 import com.reggarf.mods.Stonevaults.structures.processors.LecternProcessor;
 import com.reggarf.mods.Stonevaults.structures.processors.NoWaterProcessor;
 import com.reggarf.mods.Stonevaults.structures.processors.VineWallProcessor;
@@ -13,23 +12,22 @@ import net.minecraft.resources.Identifier;
 public class FabricProcessors {
 
     public static void register() {
-
-        StonevaultsProcessors.VINEWALL_PROCESSOR = Registry.register(
+        Registry.register(
                 BuiltInRegistries.STRUCTURE_PROCESSOR,
                 Identifier.fromNamespaceAndPath(Constants.MOD_ID, "vinewall_processor"),
-                () -> VineWallProcessor.CODEC
+                VineWallProcessor.CODEC
         );
 
-        StonevaultsProcessors.NOWATER_PROCESSOR = Registry.register(
+        Registry.register(
                 BuiltInRegistries.STRUCTURE_PROCESSOR,
                 Identifier.fromNamespaceAndPath(Constants.MOD_ID, "nowater_processor"),
-                () -> NoWaterProcessor.CODEC
+                NoWaterProcessor.CODEC
         );
 
-        StonevaultsProcessors.LECTERN_PROCESSOR = Registry.register(
+        Registry.register(
                 BuiltInRegistries.STRUCTURE_PROCESSOR,
                 Identifier.fromNamespaceAndPath(Constants.MOD_ID, "lectern_processor"),
-                () -> LecternProcessor.CODEC
+                LecternProcessor.CODEC
         );
     }
 }

@@ -12,7 +12,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 
 import net.minecraft.util.random.WeightedList;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.level.biome.MobSpawnSettings;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -113,7 +113,7 @@ public class PillagerDungeonStructure extends Structure {
                 WeightedList.builder();
 
         builder.add( new MobSpawnSettings.SpawnerData(
-                EntityType.VINDICATOR,
+                EntityTypes.VINDICATOR,
                         1,
                         2
                 ),
@@ -121,7 +121,7 @@ public class PillagerDungeonStructure extends Structure {
         );
 
         builder.add( new MobSpawnSettings.SpawnerData(
-                        EntityType.PILLAGER,
+                        EntityTypes.PILLAGER,
                         1,
                         3
                 ),
