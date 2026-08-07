@@ -1,5 +1,5 @@
 {
-  "name": "stoenvaults:startpool_dungeon_long",
+  "name": "stonevaults:startpool_dungeon_long",
   "fallback": "minecraft:empty",
   "elements": [
     {

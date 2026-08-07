@@ -1,5 +1,5 @@
 {
-  "name": "stoenvaults:startpool_magetower",
+  "name": "stonevaults:startpool_magetower",
   "fallback": "minecraft:empty",
   "elements": [
     {

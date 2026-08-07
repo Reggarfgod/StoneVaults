@@ -1,5 +1,5 @@
 {
-  "name": "stoenvaults:dungeon/dungeon_lobby",
+  "name": "stonevaults:dungeon/dungeon_lobby",
   "fallback": "minecraft:empty",
   "elements": [
     {

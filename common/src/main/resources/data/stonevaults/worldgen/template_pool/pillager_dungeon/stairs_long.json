@@ -1,5 +1,5 @@
 {
-  "name": "stonevaults:pillager_dungeon/stairs",
+  "name": "stonevaults:pillager_dungeon/stairs_long",
   "fallback": "minecraft:empty",
   "elements": [
     {

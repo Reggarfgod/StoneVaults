@@ -1,5 +1,5 @@
 {
-  "name": "stoenvaults:pillager_dungeon/lobby",
+  "name": "stonevaults:pillager_dungeon/lobby",
   "fallback": "minecraft:empty",
   "elements": [
     {

@@ -1,5 +1,5 @@
 {
-  "name": "stoenvaults:startpool_igloo",
+  "name": "stonevaults:startpool_igloo",
   "fallback": "minecraft:empty",
   "elements": [
     {
